@@ -40,7 +40,15 @@
         label="ชื่อของคุณ *"
         hint="ชื่อและนามสกุล"
         lazy-rules
-        :rules="[ val => val && val.length > 0 || 'กรุณาใส่ชื่อแนะนามสกุล']"
+        :rules="[ val => val && val.length > 0 || 'กรุณาใส่ชื่อและนามสกุลของคุณ']"
+      />
+      <q-input
+        filled
+        v-model="name"
+        label="Your name *"
+        hint="Name and lastname"
+        lazy-rules
+        :rules="[ val => val && val.length > 0 || 'Please enter name and last name']"
       />
 
       <q-input
@@ -52,7 +60,6 @@
         :rules="[
           val => val !== null && val !== '' || '请输入您的年龄',
           val => val > 0 && val < 100 || '请输入真实年龄'
->>>>>>> chinese-lang
         ]"
       />
 
@@ -65,7 +72,6 @@
     </q-form>
 
   </div>
-
 </template>
 
 <script>
