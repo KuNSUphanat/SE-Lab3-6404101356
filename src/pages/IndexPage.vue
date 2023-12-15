@@ -47,11 +47,12 @@
         filled
         type="number"
         v-model="age"
-        label="อายุของคุณ *"
+        label="你的年龄 *"
         lazy-rules
         :rules="[
-          val => val !== null && val !== '' || 'กรุณาใส่อายุของคุณ',
-          val => val > 0 && val < 100 || 'มึงยังเป็นคนอยู่ไหม '
+          val => val !== null && val !== '' || '请输入您的年龄',
+          val => val > 0 && val < 100 || '请输入真实年龄'
+>>>>>>> chinese-lang
         ]"
       />
 
